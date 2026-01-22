@@ -2,7 +2,6 @@ import type { FC, MouseEventHandler, PropsWithChildren } from "react";
 import { useMemo, useState } from "react";
 
 import { Button, LoadingOverlay, Popover, Stack, useMantineTheme } from "@mantine/core";
-import { IconBrandGithub } from "@tabler/icons";
 import { useRouter } from "next/router";
 import { signIn } from "next-auth/react";
 import { useTranslations } from "next-intl";
@@ -39,22 +38,6 @@ const GoogleButton = (props: ButtonProps) => {
     );
 };
 
-const GithubButton = (props: ButtonProps) => {
-    return (
-        <Button
-            {...props}
-            data-testid="github-login-button"
-            leftIcon={<IconBrandGithub size={16} />}
-            size="lg"
-            sx={(theme) => ({
-                "&:hover": { backgroundColor: theme.colors.gray[7], boxShadow: theme.shadows.md },
-                backgroundColor: theme.colors.gray[8],
-                borderRadius: theme.radius.sm,
-                color: White,
-            })}
-        />
-    );
-};
 
 export const LoginOptionsContent: FC<LoginOptionsProps> = ({ loading = false, setLoading }) => {
     const router = useRouter();
@@ -78,7 +61,6 @@ export const LoginOptionsContent: FC<LoginOptionsProps> = ({ loading = false, se
         <Stack px="xl" py="md" sx={{ gap: 20 }}>
             <LoadingOverlay overlayBlur={2} visible={loading} />
             <GoogleButton onClick={() => clickLoginOption("google")}>{t("googleSignIn")}</GoogleButton>
-            <GithubButton onClick={() => clickLoginOption("github")}>{t("githubSignIn")}</GithubButton>
         </Stack>
     );
 };

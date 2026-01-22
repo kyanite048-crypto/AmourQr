@@ -6,22 +6,16 @@ import { z } from "zod";
  * This way you can ensure the app isn't built with invalid env vars.
  */
 export const serverSchema = z.object({
-    DATABASE_URL: z.string().url(),
-    GITHUB_CLIENT_ID: z.string(),
-    GITHUB_CLIENT_SECRET: z.string(),
-    GOOGLE_CLIENT_ID: z.string(),
-    GOOGLE_CLIENT_SECRET: z.string(),
-    IMAGEKIT_BASE_FOLDER: z.string(),
-    IMAGEKIT_PRIVATE_KEY: z.string(),
-    IMAGEKIT_PUBLIC_KEY: z.string(),
-    NEXTAUTH_SECRET: process.env.NODE_ENV === "production" ? z.string().min(1) : z.string().min(1).optional(),
-    NEXTAUTH_URL: z.preprocess(
-        // This makes Vercel deployments not fail if you don't set NEXTAUTH_URL
-        // Since NextAuth automatically uses the VERCEL_URL if present.
-        (str) => process.env.VERCEL_URL ?? str,
-        // VERCEL_URL doesnt include `https` so it cant be validated as a URL
-        process.env.VERCEL ? z.string() : z.string().url()
-    ),
+    DATABASE_URL: z.string().url().optional(),
+    GITHUB_CLIENT_ID: z.string().optional(),
+    GITHUB_CLIENT_SECRET: z.string().optional(),
+    GOOGLE_CLIENT_ID: z.string().optional(),
+    GOOGLE_CLIENT_SECRET: z.string().optional(),
+    IMAGEKIT_BASE_FOLDER: z.string().optional(),
+    IMAGEKIT_PRIVATE_KEY: z.string().optional(),
+    IMAGEKIT_PUBLIC_KEY: z.string().optional(),
+    NEXTAUTH_SECRET: z.string().optional(),
+    NEXTAUTH_URL: z.string().optional(),
     NODE_ENV: z.enum(["development", "test", "production"]),
     SENTRY_AUTH_TOKEN: z.string().optional(),
     SENTRY_ORG: z.string().optional(),

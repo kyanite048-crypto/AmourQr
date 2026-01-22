@@ -1,15 +1,15 @@
 import type { FC } from "react";
 
-import { createStyles } from "@mantine/core";
-import Image from "next/image";
+import { createStyles, Text } from "@mantine/core";
 import Link from "next/link";
 
 const useStyles = createStyles((theme) => {
     return {
-        image: {
-            objectFit: "scale-down",
-            width: 150,
-            [`@media (max-width: ${theme.breakpoints.sm}px)`]: { width: 120 },
+        logoText: {
+            fontWeight: "bold",
+            letterSpacing: "0.1em",
+            fontSize: 24,
+            [`@media (max-width: ${theme.breakpoints.sm}px)`]: { fontSize: 20 },
         },
         titleLink: {
             "&:hover": { filter: "brightness(90%)" },
@@ -22,13 +22,13 @@ const useStyles = createStyles((theme) => {
     };
 });
 
-/** Logo link component to be used to display Menufic branding */
+/** Logo link component to be used to display AmourQR branding */
 export const Logo: FC = () => {
     const { classes } = useStyles();
 
     return (
         <Link className={classes.titleLink} href="/">
-            <Image alt="logo" className={classes.image} height={50} src="/logo.png" width={200} />
+            <Text className={classes.logoText}>AmourQR</Text>
         </Link>
     );
 };

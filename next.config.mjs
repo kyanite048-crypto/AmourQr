@@ -13,10 +13,13 @@ const config = {
     i18n: { defaultLocale: "en", locales: ["en"] },
     images: {
         formats: ["image/avif", "image/webp"],
-        remotePatterns: [{ hostname: "ik.imagekit.io", pathname: "/**", protocol: "https" }],
+        remotePatterns: [
+            { hostname: "ik.imagekit.io", pathname: "/**", protocol: "https" },
+            { hostname: "lh3.googleusercontent.com", pathname: "/**", protocol: "https" },
+        ],
         unoptimized: true,
     },
-    reactStrictMode: false,
+    reactStrictMode: true,
     sentry: {
         hideSourceMaps: true,
     },

@@ -4,7 +4,7 @@ import { Black } from "src/styles/theme";
 
 export const useStyles = createStyles((theme) => {
     const pulseAnimation = keyframes`
-        0% { box-shadow: 0 0 0 0 ${theme.fn.rgba(theme.colors.primary[4], 0.5)}; }
+        0% { box-shadow: 0 0 0 0 ${theme.fn.rgba(theme.colors.primary![4], 0.5)}; }
         70% { box-shadow: 0 0 0 25px ${theme.fn.rgba(Black, 0.01)}; }
         100% { box-shadow: 0 0 0 0 ${theme.fn.rgba(Black, 0.01)}; }
     `;
@@ -16,7 +16,7 @@ export const useStyles = createStyles((theme) => {
             transition: "transform 500ms ease",
         },
         cardIcon: {
-            color: theme.colors.primary[4],
+            color: theme.colors.primary![4],
             height: 50,
             width: 50,
         },
@@ -114,7 +114,7 @@ export const useStyles = createStyles((theme) => {
             textAlign: "center",
             [theme.fn.smallerThan("sm")]: { fontSize: 28 },
         },
-        stepIcon: { background: theme.white, borderColor: theme.colors.primary[4], color: theme.black },
+        stepIcon: { background: theme.white, borderColor: theme.colors.primary![4], color: theme.black },
         stepSeparator: { background: theme.black },
         stepperContents: { position: "relative", zIndex: 2 },
         stepperDesc: { color: theme.black, opacity: 0.7 },

@@ -8,9 +8,9 @@ import sharp from "sharp";
 import { env } from "src/env/server.mjs";
 
 export const imageKit = new ImageKit({
-    privateKey: env.IMAGEKIT_PRIVATE_KEY,
-    publicKey: env.IMAGEKIT_PUBLIC_KEY,
-    urlEndpoint: env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT,
+    privateKey: env.IMAGEKIT_PRIVATE_KEY!,
+    publicKey: env.IMAGEKIT_PUBLIC_KEY!,
+    urlEndpoint: env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT!,
 });
 
 const fac = new FastAverageColor();
@@ -37,7 +37,7 @@ export const uploadImage = async (imageBase64: string, imageFolder: string) => {
     return imageKit.upload({
         file: avifImageBuffer,
         fileName: nanoid(24),
-        folder: `/${env.IMAGEKIT_BASE_FOLDER}/${imageFolder}/`,
+        folder: `/${env.IMAGEKIT_BASE_FOLDER!}/${imageFolder}/`,
     });
 };
 

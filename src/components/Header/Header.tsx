@@ -45,8 +45,8 @@ interface Props {
 const useStyles = createStyles((theme, params: { withShadow?: boolean }) => ({
     avatarIcon: { "&:hover": { boxShadow: theme.shadows.xs }, border: `1px solid ${theme.colors.dark[3]}` },
     dashboardActionIcon: {
-        "&:hover": { backgroundColor: theme.colors.primary[6], boxShadow: theme.shadows.xs },
-        backgroundColor: theme.colors.primary[5],
+        "&:hover": { backgroundColor: theme.colors.primary![6], boxShadow: theme.shadows.xs },
+        backgroundColor: theme.colors.primary![5],
         color: theme.white,
     },
     header: {
@@ -56,7 +56,7 @@ const useStyles = createStyles((theme, params: { withShadow?: boolean }) => ({
     },
     headerContainer: { alignItems: "center", display: "flex", height: "100%" },
     headerLinksWrap: { alignItems: "center", flex: 1, paddingLeft: 50, paddingTop: 5 },
-    linkActive: { color: theme.colors.primary[6] },
+    linkActive: { color: theme.colors.primary![6] },
     popoverLink: {
         paddingBottom: theme.spacing.md,
         paddingLeft: theme.spacing.lg,

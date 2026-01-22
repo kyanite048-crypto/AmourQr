@@ -1,5 +1,5 @@
 <br>
-<h1 align="center"> <b>Menufic</b> </h1> 
+<h1 align="center"> <b>AmourQR</b> </h1>
 <h4 align="center">A digital menu generator for restaurants, built using <a href="https://create.t3.gg" target="_blank">T3 stack</a></h4>
 
 <p align="center">
@@ -48,14 +48,14 @@
 </p>
 <p align="center">
   <a href="https://menufic.com">
-    <img alt="Menufic-Preview-Image" src="public/menufic_banner.jpg" width="1024">
+    <img alt="AmourQR-Preview-Image" src="public/menufic_banner.jpg" width="1024">
   </a>
 </p>
 <br />
 
 ## Introduction
 
-[Menufic](https://menufic.com) is a digital menu generator for restaurants that makes it simple and easy for anyone to create and share their restaurant menus. Menufic is built using [Next.js](https://nextjs.org), [NextAuth.js](https://next-auth.js.org), [Prisma](https://prisma.io), [tRPC](https://trpc.io), [Neon](https://neon.tech) & [Imagekit](https://imagekit.io). Following are some of the features that Menufic provides.
+[AmourQR](https://menufic.com) is a digital menu generator for restaurants that makes it simple and easy for anyone to create and share their restaurant menus. AmourQR is built using [Next.js](https://nextjs.org), [NextAuth.js](https://next-auth.js.org), [Prisma](https://prisma.io), [tRPC](https://trpc.io), [Neon](https://neon.tech) & [Imagekit](https://imagekit.io). Following are some of the features that AmourQR provides.
 
 -   Simple & intuitive UI to create & manage restaurant menus
 -   Generate menus that are optimized for search engines and social media crawlers

@@ -16,7 +16,7 @@ export const getStyles = (theme: MantineTheme): CSSObject => ({
         color: theme.black,
     },
     a: {
-        ":hover": { color: theme.colors.primary[5] },
+        ":hover": { color: theme.colors.primary![5] },
         color: "inherit",
         textDecoration: "none",
         transition: "color 500ms ease",
@@ -31,7 +31,7 @@ export const getStyles = (theme: MantineTheme): CSSObject => ({
     },
     "body::-webkit-scrollbar": { backgroundColor: theme.colors.dark[4], width: "5px" },
     "body::-webkit-scrollbar-thumb": {
-        backgroundColor: theme.colors.primary[6],
-        outline: `1px solid ${theme.colors.primary[6]}`,
+        backgroundColor: theme.colors.primary![6],
+        outline: `1px solid ${theme.colors.primary![6]}`,
     },
 });
